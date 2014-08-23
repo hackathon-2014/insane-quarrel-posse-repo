@@ -43,11 +43,6 @@
         NSLog(@"y - %@", child.name);
     }
     
-//    SKSpriteNode * child = [SKSpriteNode spriteNodeWithImageNamed:name ];
-//    [child setAnchorPoint:CGPointZero];
-//    [child setPosition:CGPointMake(0, 0)];
-//    [realNode addChild:child];
-    
     return realNode;
 }
 

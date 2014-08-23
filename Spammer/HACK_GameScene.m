@@ -76,17 +76,30 @@
     [_background update:currentTime];
     
     //rotating player
-    if (_playerSprite.zRotation > -0.1 && _playerSprite.zRotation < 0.1) {
+    NSLog(@"r:%f", _playerSprite.zRotation);
+    if (_playerSprite.zRotation > -0.5 && _playerSprite.zRotation < 0.5) {
         _background.xScrollingSpeed = 4;
         _background.yScrollingSpeed = 0;
+    } else if (_playerSprite.zRotation > 0.5 && _playerSprite.zRotation < 1.0) {
+        _background.xScrollingSpeed = 4;
+        _background.yScrollingSpeed = 4;
     } else if (_playerSprite.zRotation > 1 && _playerSprite.zRotation < 2) {
         _background.xScrollingSpeed = 0;
         _background.yScrollingSpeed = 4;
-    } else if (_playerSprite.zRotation > -4 && _playerSprite.zRotation < -3) {
+    } else if (_playerSprite.zRotation > 2.0 && _playerSprite.zRotation < 2.5) {
+        _background.xScrollingSpeed = -4;
+        _background.yScrollingSpeed = 4;
+    } else if (_playerSprite.zRotation > -3.5 && _playerSprite.zRotation < -3) {
         _background.xScrollingSpeed = -4;
         _background.yScrollingSpeed = 0;
+    } else if (_playerSprite.zRotation > -2.5 && _playerSprite.zRotation < -2.0) {
+        _background.xScrollingSpeed = -4;
+        _background.yScrollingSpeed = -4;
     } else if (_playerSprite.zRotation > -2 && _playerSprite.zRotation < -1) {
         _background.xScrollingSpeed = 0;
+        _background.yScrollingSpeed = -4;
+    } else if (_playerSprite.zRotation > -1.0 && _playerSprite.zRotation < -0.5) {
+        _background.xScrollingSpeed = 4;
         _background.yScrollingSpeed = -4;
     }
 }

@@ -11,7 +11,7 @@
 // Global project constants
 static const uint32_t kPlayerCategory   =       0x1 << 0;
 
-static const int kPlayerTurnSegments    =       4;
+static const int kPlayerTurnSegments    =       8;
 
 @interface HACKAppDelegate : UIResponder <UIApplicationDelegate>
 
