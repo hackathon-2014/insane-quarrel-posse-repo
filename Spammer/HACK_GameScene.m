@@ -18,9 +18,43 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         self.backgroundColor = [SKColor blackColor];
+        self.physicsWorld.contactDelegate = self;
+        
+        // initialize and create our sprite textures
+        _spriteTextures = [[HACK_Textures alloc] init];
+        [_spriteTextures createAnimationTextures];
+        
+        // add contents to game screen
+        [self createSceneContents];
 
     }
     return self;
+}
+
+
+
+#pragma mark Scene creation
+
+
+
+- (void)createSceneContents
+{
+    // Background
+    _back = [HACK_ScrollingNode scrollingNodeWithImageNamed:@"background" inContainerWidth:self.frame.size.width];
+    [_back setScrollingSpeed:4];
+    [self addChild:_back];
+    
+    // Player
+    _playerSprite = [HACK_Player initNewPlayer:self startingPoint:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
+    [_playerSprite spawnedInScene:self];
+    [_playerSprite runRight];
+    //    _playerLivesRemaining = kPlayerLivesMax;
+    //    _playerIsDeadFlag = NO;
+    //    [self playerLivesDisplay];
+}
+
+-(void)update:(CFTimeInterval)currentTime {
+    [_back update:currentTime];
 }
 
 @end

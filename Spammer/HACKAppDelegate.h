@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+// Global project constants
+static const uint32_t kPlayerCategory =            0x1 << 0;
+
 @interface HACKAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

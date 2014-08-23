@@ -7,7 +7,15 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "HACKAppDelegate.h"
+#import "HACK_ScrollingNode.h"
+#import "HACK_Player.h"
 
-@interface HACK_GameScene : SKScene
+@interface HACK_GameScene : SKScene <SKPhysicsContactDelegate>
+
+@property (strong, nonatomic) HACK_Player *playerSprite;
+@property (strong, nonatomic) HACK_Textures *spriteTextures;
+
+@property (strong, nonatomic) HACK_ScrollingNode *back;
 
 @end

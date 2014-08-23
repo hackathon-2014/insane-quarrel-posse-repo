@@ -22,4 +22,6 @@
 
 @property (nonatomic, strong) NSArray *playerRunRightTextures;
 
+- (void)createAnimationTextures;
+
 @end
