@@ -11,6 +11,7 @@
 #import "HACK_ScrollingNode.h"
 #import "HACK_Player.h"
 #import "HACK_Email.h"
+#import "HACK_Server.h"
 
 @interface HACK_GameScene : SKScene <SKPhysicsContactDelegate>
 
@@ -18,5 +19,7 @@
 @property (strong, nonatomic) HACK_Textures *spriteTextures;
 
 @property (strong, nonatomic) HACK_ScrollingNode *background;
+
+@property BOOL enemyIsSpawningFlag;
 
 @end

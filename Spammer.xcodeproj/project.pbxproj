@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8431348619A94E5500777BEA /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 8431348419A94E5500777BEA /* Splash.png */; };
 		8431348819A94F2E00777BEA /* Instructions.png in Resources */ = {isa = PBXBuildFile; fileRef = 8431348719A94F2E00777BEA /* Instructions.png */; };
+		8431348B19A951E700777BEA /* HACK_Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431348A19A951E700777BEA /* HACK_Server.m */; };
+		8431348D19A9576000777BEA /* Server.png in Resources */ = {isa = PBXBuildFile; fileRef = 8431348C19A9576000777BEA /* Server.png */; };
 		84E0A75B19A8DD7400B11C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E0A75A19A8DD7400B11C8D /* Foundation.framework */; };
 		84E0A75D19A8DD7400B11C8D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E0A75C19A8DD7400B11C8D /* CoreGraphics.framework */; };
 		84E0A75F19A8DD7400B11C8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E0A75E19A8DD7400B11C8D /* UIKit.framework */; };
@@ -81,6 +83,9 @@
 /* Begin PBXFileReference section */
 		8431348419A94E5500777BEA /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash.png; sourceTree = "<group>"; };
 		8431348719A94F2E00777BEA /* Instructions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Instructions.png; sourceTree = "<group>"; };
+		8431348919A951E700777BEA /* HACK_Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACK_Server.h; sourceTree = "<group>"; };
+		8431348A19A951E700777BEA /* HACK_Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACK_Server.m; sourceTree = "<group>"; };
+		8431348C19A9576000777BEA /* Server.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Server.png; sourceTree = "<group>"; };
 		84E0A75719A8DD7400B11C8D /* Spammer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spammer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E0A75A19A8DD7400B11C8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84E0A75C19A8DD7400B11C8D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -228,6 +233,8 @@
 				84E0A7AB19A8E94900B11C8D /* HACK_Player.m */,
 				84EBCE7919A9388900AA0527 /* HACK_Email.h */,
 				84EBCE7A19A9388900AA0527 /* HACK_Email.m */,
+				8431348919A951E700777BEA /* HACK_Server.h */,
+				8431348A19A951E700777BEA /* HACK_Server.m */,
 				84E0A77A19A8DD7400B11C8D /* Spaceship.png */,
 				84E0A77C19A8DD7400B11C8D /* Images.xcassets */,
 				84E0A79919A8E8D100B11C8D /* Images */,
@@ -272,6 +279,7 @@
 				8431348419A94E5500777BEA /* Splash.png */,
 				84E0A7BE19A9098000B11C8D /* background.png */,
 				84EBCE7719A9386A00AA0527 /* Email.png */,
+				8431348C19A9576000777BEA /* Server.png */,
 				84EBCE5719A934B300AA0527 /* Player-D-1.png */,
 				84EBCE5819A934B400AA0527 /* Player-D-2.png */,
 				84EBCE5919A934B400AA0527 /* Player-D-3.png */,
@@ -395,6 +403,7 @@
 				84EBCE7219A934C300AA0527 /* Player-U-4.png in Resources */,
 				84E0A7CB19A928D800B11C8D /* Player-L-4.png in Resources */,
 				84E0A7CC19A928D800B11C8D /* Player-L-5.png in Resources */,
+				8431348D19A9576000777BEA /* Server.png in Resources */,
 				84E0A77B19A8DD7400B11C8D /* Spaceship.png in Resources */,
 				84E0A7CF19A928D800B11C8D /* Player-L-8.png in Resources */,
 				84E0A7BF19A9098000B11C8D /* background.png in Resources */,
@@ -449,6 +458,7 @@
 				84EBCE7B19A9388900AA0527 /* HACK_Email.m in Sources */,
 				84E0A7AC19A8E94900B11C8D /* HACK_Player.m in Sources */,
 				84E0A76919A8DD7400B11C8D /* main.m in Sources */,
+				8431348B19A951E700777BEA /* HACK_Server.m in Sources */,
 				84E0A7B619A8F6D900B11C8D /* HACK_GameScene.m in Sources */,
 				84E0A77619A8DD7400B11C8D /* HACKViewController.m in Sources */,
 				84E0A76D19A8DD7400B11C8D /* HACKAppDelegate.m in Sources */,

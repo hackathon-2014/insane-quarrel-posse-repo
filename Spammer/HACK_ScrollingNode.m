@@ -48,7 +48,9 @@
 
 - (void) update:(NSTimeInterval)currentTime
 {
-    [self.children enumerateObjectsUsingBlock:^(SKSpriteNode * child, NSUInteger idx, BOOL *stop) {
+    [self enumerateChildNodesWithName:@"background" usingBlock:^(SKNode *node, BOOL *stop) {
+        *stop = NO;
+        HACK_ScrollingNode *child = (HACK_ScrollingNode *)node;
         child.position = CGPointMake(child.position.x-_xScrollingSpeed, child.position.y-_yScrollingSpeed);
         if ((child.position.x <= -child.size.width) && (_xScrollingSpeed > 0)){
             float delta = child.position.x+child.size.width;
@@ -70,10 +72,6 @@
             child.position = CGPointMake(child.position.x, child.size.height-delta+10);
             //NSLog(@"move down - repositioned Y for %@", child.name);
         }
-//        if ([child.name isEqualToString:@"xChild0"]) {
-//            NSLog(@"xChild0 x:%f, w:%f, s:%f", child.position.x, child.size.width, _xScrollingSpeed);
-//        }
-        
     }];
 }
 

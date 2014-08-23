@@ -46,6 +46,7 @@
 #define kPlayerRunDown8FileName              @"Player-D-8.png"
 
 #define kEmailFileName                       @"Email.png"
+#define kServerFileName                      @"Server.png"
 
 @interface HACK_Textures : NSObject
 

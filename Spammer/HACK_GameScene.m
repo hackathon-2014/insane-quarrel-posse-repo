@@ -121,6 +121,13 @@
     // scrolling background
     [_background update:currentTime];
     
+    // servers
+    [self enumerateChildNodesWithName:@"server" usingBlock:^(SKNode *node, BOOL *stop) {
+        *stop = NO;
+        HACK_Server *child = (HACK_Server *)node;
+        child.position = CGPointMake(child.position.x-_background.xScrollingSpeed, child.position.y-_background.yScrollingSpeed);
+    }];
+    
     //player direction cooresponds to static background scrolling
     switch (_playerSprite.currentDirection) {
         case HACK_PlayerDirectionE:
@@ -158,6 +165,39 @@
             
         default:
             break;
+    }
+    
+    // enemy sprite spawning
+    if (!_enemyIsSpawningFlag) {
+        _enemyIsSpawningFlag = YES;
+        
+        // begin delay & when completed spawn new enemy
+        SKAction *spacing = [SKAction waitForDuration:3];
+        [self runAction:spacing completion:^{
+            // Create & spawn the new Enemy
+            _enemyIsSpawningFlag = NO;
+            
+            HACK_Server *newServer = nil;
+            if (_background.xScrollingSpeed > 0 && _background.yScrollingSpeed > 0) {
+                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(565, 320)];
+            } else if (_background.xScrollingSpeed > 0 && _background.yScrollingSpeed < 0) {
+                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(565, 0)];
+            } else if (_background.xScrollingSpeed == 0 && _background.yScrollingSpeed > 0) {
+                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(200, 320)];
+            } else if (_background.xScrollingSpeed == 0 && _background.yScrollingSpeed < 0) {
+                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(350, 0)];
+            } else if (_background.xScrollingSpeed < 0 && _background.yScrollingSpeed > 0) {
+                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(0, 300)];
+            } else if (_background.xScrollingSpeed < 0 && _background.yScrollingSpeed < 0) {
+                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(0, 0)];
+            } else if (_background.xScrollingSpeed > 0 && _background.yScrollingSpeed == 0) {
+                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(565, 320)];
+            } else if (_background.xScrollingSpeed < 0 && _background.yScrollingSpeed == 0) {
+                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(0, 100)];
+            }
+
+            [newServer spawnedInScene:self];
+        }];
     }
 }
 
