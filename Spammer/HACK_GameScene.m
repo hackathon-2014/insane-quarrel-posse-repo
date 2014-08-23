@@ -51,6 +51,49 @@
     [_playerSprite runRight];
 }
 
+- (void)shootEmail
+{
+    HACK_Email *newEmail = nil;
+    // forward impulse applied
+    switch (_playerSprite.currentDirection) {
+        case HACK_PlayerDirectionE:
+            newEmail = [HACK_Email initNewEmail:self startingPoint:CGPointMake(CGRectGetMidX(self.frame)+20, CGRectGetMidY(self.frame))];
+            [newEmail.physicsBody applyImpulse:CGVectorMake(10, 0)];
+            break;
+        case HACK_PlayerDirectionNE:
+            newEmail = [HACK_Email initNewEmail:self startingPoint:CGPointMake(CGRectGetMidX(self.frame)+10, CGRectGetMidY(self.frame)+10)];
+            [newEmail.physicsBody applyImpulse:CGVectorMake(10, 10)];
+            break;
+        case HACK_PlayerDirectionN:
+            newEmail = [HACK_Email initNewEmail:self startingPoint:CGPointMake(CGRectGetMidX(self.frame)+0, CGRectGetMidY(self.frame)+20)];
+            [newEmail.physicsBody applyImpulse:CGVectorMake(0, 10)];
+            break;
+        case HACK_PlayerDirectionNW:
+            newEmail = [HACK_Email initNewEmail:self startingPoint:CGPointMake(CGRectGetMidX(self.frame)-10, CGRectGetMidY(self.frame)+10)];
+            [newEmail.physicsBody applyImpulse:CGVectorMake(-10, 10)];
+            break;
+        case HACK_PlayerDirectionW:
+            newEmail = [HACK_Email initNewEmail:self startingPoint:CGPointMake(CGRectGetMidX(self.frame)-20, CGRectGetMidY(self.frame)+0)];
+            [newEmail.physicsBody applyImpulse:CGVectorMake(-10, 0)];
+            break;
+        case HACK_PlayerDirectionSW:
+            newEmail = [HACK_Email initNewEmail:self startingPoint:CGPointMake(CGRectGetMidX(self.frame)-10, CGRectGetMidY(self.frame)-10)];
+            [newEmail.physicsBody applyImpulse:CGVectorMake(-10, -10)];
+            break;
+        case HACK_PlayerDirectionS:
+            newEmail = [HACK_Email initNewEmail:self startingPoint:CGPointMake(CGRectGetMidX(self.frame)+0, CGRectGetMidY(self.frame)-20)];
+            [newEmail.physicsBody applyImpulse:CGVectorMake(0, -10)];
+            break;
+        case HACK_PlayerDirectionSE:
+            newEmail = [HACK_Email initNewEmail:self startingPoint:CGPointMake(CGRectGetMidX(self.frame)+10, CGRectGetMidY(self.frame)-10)];
+            [newEmail.physicsBody applyImpulse:CGVectorMake(10, -10)];
+            break;
+            
+        default:
+            break;
+    }
+}
+
 
 
 #pragma mark Contact / Collision / Touches
@@ -63,11 +106,7 @@
         CGPoint location = [touch locationInNode:self];
         if (location.y >= (self.frame.size.height / 2 )) {
             // user touched upper half of the screen (zero = bottom of screen)
-            HACK_Email *newEmail = [HACK_Email initNewEmail:self startingPoint:CGPointMake(CGRectGetMidX(self.frame)+20, CGRectGetMidY(self.frame)+20)];
-            
-            // forward impulse applied
-            [newEmail.physicsBody applyImpulse:CGVectorMake(10, 0)];
-            
+            [self shootEmail];            
         } else if (location.x <= ( self.frame.size.width / 2 )) {
             // user touched left side of screen
             [_playerSprite rotateLeft];

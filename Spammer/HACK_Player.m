@@ -30,8 +30,10 @@
     // physics
     player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:player.size];
     player.physicsBody.categoryBitMask = kPlayerCategory;
-    player.physicsBody.contactTestBitMask = kPlayerCategory;
-    player.physicsBody.collisionBitMask = kPlayerCategory ;
+    //player.physicsBody.contactTestBitMask = kPlayerCategory;
+    //player.physicsBody.collisionBitMask = kPlayerCategory ;
+    player.physicsBody.linearDamping = 1.0;
+    player.physicsBody.density = 1000.0;
     player.physicsBody.affectedByGravity = NO;
     player.physicsBody.allowsRotation = YES;
     

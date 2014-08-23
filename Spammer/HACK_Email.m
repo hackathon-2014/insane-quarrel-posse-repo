@@ -35,8 +35,8 @@
     // physics
     email.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:email.size];
     email.physicsBody.categoryBitMask = kEmailCategory;
-    email.physicsBody.contactTestBitMask = kPlayerCategory;
-    email.physicsBody.collisionBitMask = kPlayerCategory ;
+    //email.physicsBody.contactTestBitMask = kPlayerCategory;
+    //email.physicsBody.collisionBitMask = kPlayerCategory ;
     email.physicsBody.affectedByGravity = NO;
     email.physicsBody.allowsRotation = YES;
     
