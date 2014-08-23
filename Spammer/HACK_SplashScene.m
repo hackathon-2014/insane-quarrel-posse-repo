@@ -37,6 +37,7 @@
     /* Called when a touch begins */
     
     for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInNode:self];
         SKNode *instructionNode = [self childNodeWithName:@"instructionNode"];
         
         if (instructionNode != nil) {
@@ -60,6 +61,8 @@
                     [self.view presentScene:nextScene transition:doors];
                 }];
             }
+        } else if (location.x < -1000) {
+            //bogus entry to remove warning
         } else {
             // first tap - show instructions
             

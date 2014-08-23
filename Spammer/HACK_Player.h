@@ -13,6 +13,7 @@
 @interface HACK_Player : SKSpriteNode
 
 @property (nonatomic, strong) HACK_Textures *spriteTextures;
+@property HACK_PlayerDirections currentDirection;
 
 + (HACK_Player *)initNewPlayer:(SKScene *)whichScene startingPoint:(CGPoint)location;
 - (void)spawnedInScene:(SKScene *)whichScene;

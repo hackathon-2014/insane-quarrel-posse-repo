@@ -75,32 +75,43 @@
     // scrolling background
     [_background update:currentTime];
     
-    //rotating player
-    NSLog(@"r:%f", _playerSprite.zRotation);
-    if (_playerSprite.zRotation > -0.5 && _playerSprite.zRotation < 0.5) {
-        _background.xScrollingSpeed = 4;
-        _background.yScrollingSpeed = 0;
-    } else if (_playerSprite.zRotation > 0.5 && _playerSprite.zRotation < 1.0) {
-        _background.xScrollingSpeed = 4;
-        _background.yScrollingSpeed = 4;
-    } else if (_playerSprite.zRotation > 1 && _playerSprite.zRotation < 2) {
-        _background.xScrollingSpeed = 0;
-        _background.yScrollingSpeed = 4;
-    } else if (_playerSprite.zRotation > 2.0 && _playerSprite.zRotation < 2.5) {
-        _background.xScrollingSpeed = -4;
-        _background.yScrollingSpeed = 4;
-    } else if (_playerSprite.zRotation > -3.5 && _playerSprite.zRotation < -3) {
-        _background.xScrollingSpeed = -4;
-        _background.yScrollingSpeed = 0;
-    } else if (_playerSprite.zRotation > -2.5 && _playerSprite.zRotation < -2.0) {
-        _background.xScrollingSpeed = -4;
-        _background.yScrollingSpeed = -4;
-    } else if (_playerSprite.zRotation > -2 && _playerSprite.zRotation < -1) {
-        _background.xScrollingSpeed = 0;
-        _background.yScrollingSpeed = -4;
-    } else if (_playerSprite.zRotation > -1.0 && _playerSprite.zRotation < -0.5) {
-        _background.xScrollingSpeed = 4;
-        _background.yScrollingSpeed = -4;
+    //player direction cooresponds to static background scrolling
+    switch (_playerSprite.currentDirection) {
+        case HACK_PlayerDirectionE:
+            _background.xScrollingSpeed = 4;
+            _background.yScrollingSpeed = 0;
+            break;
+        case HACK_PlayerDirectionNE:
+            _background.xScrollingSpeed = 4;
+            _background.yScrollingSpeed = 4;
+            break;
+        case HACK_PlayerDirectionN:
+            _background.xScrollingSpeed = 0;
+            _background.yScrollingSpeed = 4;
+            break;
+        case HACK_PlayerDirectionNW:
+            _background.xScrollingSpeed = -4;
+            _background.yScrollingSpeed = 4;
+            break;
+        case HACK_PlayerDirectionW:
+            _background.xScrollingSpeed = -4;
+            _background.yScrollingSpeed = 0;
+            break;
+        case HACK_PlayerDirectionSW:
+            _background.xScrollingSpeed = -4;
+            _background.yScrollingSpeed = -4;
+            break;
+        case HACK_PlayerDirectionS:
+            _background.xScrollingSpeed = 0;
+            _background.yScrollingSpeed = -4;
+            break;
+        case HACK_PlayerDirectionSE:
+            _background.xScrollingSpeed = 4;
+            _background.yScrollingSpeed = -4;
+            break;
+            
+        default:
+            break;
     }
 }
 
