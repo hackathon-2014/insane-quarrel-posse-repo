@@ -64,6 +64,8 @@
 		84EBCE7419A934C300AA0527 /* Player-U-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBCE6C19A934C300AA0527 /* Player-U-6.png */; };
 		84EBCE7519A934C300AA0527 /* Player-U-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBCE6D19A934C300AA0527 /* Player-U-7.png */; };
 		84EBCE7619A934C300AA0527 /* Player-U-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBCE6E19A934C300AA0527 /* Player-U-8.png */; };
+		84EBCE7819A9386A00AA0527 /* Email.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBCE7719A9386A00AA0527 /* Email.png */; };
+		84EBCE7B19A9388900AA0527 /* HACK_Email.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EBCE7A19A9388900AA0527 /* HACK_Email.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,9 @@
 		84EBCE6C19A934C300AA0527 /* Player-U-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-U-6.png"; sourceTree = "<group>"; };
 		84EBCE6D19A934C300AA0527 /* Player-U-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-U-7.png"; sourceTree = "<group>"; };
 		84EBCE6E19A934C300AA0527 /* Player-U-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-U-8.png"; sourceTree = "<group>"; };
+		84EBCE7719A9386A00AA0527 /* Email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Email.png; sourceTree = "<group>"; };
+		84EBCE7919A9388900AA0527 /* HACK_Email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACK_Email.h; sourceTree = "<group>"; };
+		84EBCE7A19A9388900AA0527 /* HACK_Email.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACK_Email.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +226,8 @@
 				84E0A7B819A8FFC900B11C8D /* HACK_ScrollingNode.m */,
 				84E0A7AA19A8E94900B11C8D /* HACK_Player.h */,
 				84E0A7AB19A8E94900B11C8D /* HACK_Player.m */,
+				84EBCE7919A9388900AA0527 /* HACK_Email.h */,
+				84EBCE7A19A9388900AA0527 /* HACK_Email.m */,
 				84E0A77A19A8DD7400B11C8D /* Spaceship.png */,
 				84E0A77C19A8DD7400B11C8D /* Images.xcassets */,
 				84E0A79919A8E8D100B11C8D /* Images */,
@@ -261,6 +268,7 @@
 		84E0A79919A8E8D100B11C8D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				84EBCE7719A9386A00AA0527 /* Email.png */,
 				84E0A7BE19A9098000B11C8D /* background.png */,
 				84E0A7B219A8EE3E00B11C8D /* Splash.png */,
 				84E0A7B019A8EC4400B11C8D /* Instructions.png */,
@@ -406,6 +414,7 @@
 				84E0A7A819A8E92D00B11C8D /* Player-R-7.png in Resources */,
 				84E0A7B319A8EE3E00B11C8D /* Splash.png in Resources */,
 				84E0A7A619A8E92D00B11C8D /* Player-R-5.png in Resources */,
+				84EBCE7819A9386A00AA0527 /* Email.png in Resources */,
 				84E0A7C919A928D800B11C8D /* Player-L-2.png in Resources */,
 				84E0A7A519A8E92D00B11C8D /* Player-R-4.png in Resources */,
 				84E0A7A719A8E92D00B11C8D /* Player-R-6.png in Resources */,
@@ -437,6 +446,7 @@
 			files = (
 				84E0A7B919A8FFC900B11C8D /* HACK_ScrollingNode.m in Sources */,
 				84E0A7AF19A8E98B00B11C8D /* HACK_Textures.m in Sources */,
+				84EBCE7B19A9388900AA0527 /* HACK_Email.m in Sources */,
 				84E0A7AC19A8E94900B11C8D /* HACK_Player.m in Sources */,
 				84E0A76919A8DD7400B11C8D /* main.m in Sources */,
 				84E0A7B619A8F6D900B11C8D /* HACK_GameScene.m in Sources */,

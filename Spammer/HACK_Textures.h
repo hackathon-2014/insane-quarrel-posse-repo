@@ -45,6 +45,8 @@
 #define kPlayerRunDown7FileName              @"Player-D-7.png"
 #define kPlayerRunDown8FileName              @"Player-D-8.png"
 
+#define kEmailFileName                       @"Email.png"
+
 @interface HACK_Textures : NSObject
 
 @property (nonatomic, strong) NSArray *playerRunRightTextures;

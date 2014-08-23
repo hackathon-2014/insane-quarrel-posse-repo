@@ -61,7 +61,14 @@
     /* Called when a touch begins */
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
-        if (location.x <= ( self.frame.size.width / 2 )) {
+        if (location.y >= (self.frame.size.height / 2 )) {
+            // user touched upper half of the screen (zero = bottom of screen)
+            HACK_Email *newEmail = [HACK_Email initNewEmail:self startingPoint:CGPointMake(CGRectGetMidX(self.frame)+20, CGRectGetMidY(self.frame)+20)];
+            
+            // forward impulse applied
+            [newEmail.physicsBody applyImpulse:CGVectorMake(10, 0)];
+            
+        } else if (location.x <= ( self.frame.size.width / 2 )) {
             // user touched left side of screen
             [_playerSprite rotateLeft];
         } else {

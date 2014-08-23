@@ -10,6 +10,7 @@
 #import "HACKAppDelegate.h"
 #import "HACK_ScrollingNode.h"
 #import "HACK_Player.h"
+#import "HACK_Email.h"
 
 @interface HACK_GameScene : SKScene <SKPhysicsContactDelegate>
 
