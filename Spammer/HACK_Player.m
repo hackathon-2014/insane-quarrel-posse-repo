@@ -59,6 +59,22 @@
 
 
 
+- (void)rotateLeft
+{
+    float fullCircle = 2 * M_PI;    
+    SKAction *rotate = [SKAction rotateByAngle:(fullCircle/kPlayerTurnSegments) duration:0.1];
+    [self runAction:rotate];
+    
+}
+
+- (void)rotateRight
+{
+    float fullCircle = 2 * M_PI;
+    SKAction *rotate = [SKAction rotateByAngle:-(fullCircle/kPlayerTurnSegments) duration:0.1];
+    [self runAction:rotate];
+    
+}
+
 - (void)runRight
 {
     NSLog(@"run Right");

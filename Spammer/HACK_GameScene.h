@@ -16,6 +16,6 @@
 @property (strong, nonatomic) HACK_Player *playerSprite;
 @property (strong, nonatomic) HACK_Textures *spriteTextures;
 
-@property (strong, nonatomic) HACK_ScrollingNode *back;
+@property (strong, nonatomic) HACK_ScrollingNode *background;
 
 @end

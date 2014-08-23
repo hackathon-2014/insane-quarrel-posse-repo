@@ -40,22 +40,55 @@
 - (void)createSceneContents
 {
     // Background
-    _back = [HACK_ScrollingNode scrollingNodeWithImageNamed:@"background" inContainerWidth:self.frame.size.width inContainerHeight:self.frame.size.height];
-    _back.xScrollingSpeed = 4;
-    _back.yScrollingSpeed = 0;
-    [self addChild:_back];
+    _background = [HACK_ScrollingNode scrollingNodeWithImageNamed:@"background" inContainerWidth:self.frame.size.width inContainerHeight:self.frame.size.height];
+    _background.xScrollingSpeed = 4;
+    _background.yScrollingSpeed = 0;
+    [self addChild:_background];
     
     // Player
     _playerSprite = [HACK_Player initNewPlayer:self startingPoint:CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))];
     [_playerSprite spawnedInScene:self];
     [_playerSprite runRight];
-    //    _playerLivesRemaining = kPlayerLivesMax;
-    //    _playerIsDeadFlag = NO;
-    //    [self playerLivesDisplay];
+}
+
+
+
+#pragma mark Contact / Collision / Touches
+
+
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    /* Called when a touch begins */
+    for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInNode:self];
+        if (location.x <= ( self.frame.size.width / 2 )) {
+            // user touched left side of screen
+            [_playerSprite rotateLeft];
+        } else {
+            // user touched right side of screen
+            [_playerSprite rotateRight];
+        }
+    }
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    [_back update:currentTime];
+    // scrolling background
+    [_background update:currentTime];
+    
+    //rotating player
+    if (_playerSprite.zRotation > -0.1 && _playerSprite.zRotation < 0.1) {
+        _background.xScrollingSpeed = 4;
+        _background.yScrollingSpeed = 0;
+    } else if (_playerSprite.zRotation > 1 && _playerSprite.zRotation < 2) {
+        _background.xScrollingSpeed = 0;
+        _background.yScrollingSpeed = 4;
+    } else if (_playerSprite.zRotation > -4 && _playerSprite.zRotation < -3) {
+        _background.xScrollingSpeed = -4;
+        _background.yScrollingSpeed = 0;
+    } else if (_playerSprite.zRotation > -2 && _playerSprite.zRotation < -1) {
+        _background.xScrollingSpeed = 0;
+        _background.yScrollingSpeed = -4;
+    }
 }
 
 @end

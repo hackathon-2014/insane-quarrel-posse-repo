@@ -17,6 +17,8 @@
 + (HACK_Player *)initNewPlayer:(SKScene *)whichScene startingPoint:(CGPoint)location;
 - (void)spawnedInScene:(SKScene *)whichScene;
 
+- (void)rotateLeft;
+- (void)rotateRight;
 - (void)runRight;
 
 @end
