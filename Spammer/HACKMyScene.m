@@ -13,17 +13,21 @@
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
+        self.backgroundColor = [SKColor blackColor];
         
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+        NSString *fileName = @"Splash";
+        SKSpriteNode *splash = [SKSpriteNode spriteNodeWithImageNamed:fileName];
+        splash.name = @"splashNode";
+        splash.anchorPoint = CGPointMake(0, 0);
+        [self addChild:splash];
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        SKLabelNode *myText = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
-        myLabel.text = @"Hello, Hackathon!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
-        
-        [self addChild:myLabel];
+        myText.text = @"Press To Start";
+        myText.name = @"startNode";
+        myText.fontSize = 30;
+        myText.position = CGPointMake(CGRectGetMidX(self.frame),
+                                      CGRectGetMidY(self.frame)-100);
     }
     return self;
 }
@@ -32,17 +36,38 @@
     /* Called when a touch begins */
     
     for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
+        SKNode *instructionNode = [self childNodeWithName:@"instructionNode"];
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
+        if (instructionNode != nil) {
+            // second tap - on to the game
+            
+            // remove instruction sheet
+            [instructionNode removeFromParent];
+            
+            // transition to game scene
+            SKNode *splashNode = [self childNodeWithName:@"splashNode"];
+            SKNode *startNode = [self childNodeWithName:@"startNode"];
+            if (splashNode != nil) {
+                splashNode.name = nil;
+                SKAction *zoom = [SKAction scaleTo: 4.0 duration: 1];
+                SKAction *fadeAway = [SKAction fadeOutWithDuration: 1];
+                SKAction *grouped = [SKAction group:@[zoom, fadeAway]];
+                [startNode runAction:grouped];
+//                [splashNode runAction: grouped completion:^{
+//                    SKBGameScene *nextScene  = [[SKBGameScene alloc] initWithSize:self.size];
+//                    SKTransition *doors = [SKTransition doorwayWithDuration:0.5];
+//                    [self.view presentScene:nextScene transition:doors];
+//                }];
+            }
+        } else {
+            // first tap - show instructions
+            
+            SKSpriteNode *instruction = [SKSpriteNode spriteNodeWithImageNamed:@"Instructions"];
+            instruction.name = @"instructionNode";
+            instruction.anchorPoint = CGPointMake(0.5, 0.5);
+            instruction.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+            [self addChild:instruction];
+        }
     }
 }
 

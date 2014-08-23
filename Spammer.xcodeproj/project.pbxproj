@@ -25,6 +25,18 @@
 		84E0A78619A8DD7400B11C8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E0A75E19A8DD7400B11C8D /* UIKit.framework */; };
 		84E0A78E19A8DD7400B11C8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A78C19A8DD7400B11C8D /* InfoPlist.strings */; };
 		84E0A79019A8DD7400B11C8D /* SpammerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0A78F19A8DD7400B11C8D /* SpammerTests.m */; };
+		84E0A7A219A8E92D00B11C8D /* Player-R-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A79A19A8E92D00B11C8D /* Player-R-1.png */; };
+		84E0A7A319A8E92D00B11C8D /* Player-R-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A79B19A8E92D00B11C8D /* Player-R-2.png */; };
+		84E0A7A419A8E92D00B11C8D /* Player-R-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A79C19A8E92D00B11C8D /* Player-R-3.png */; };
+		84E0A7A519A8E92D00B11C8D /* Player-R-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A79D19A8E92D00B11C8D /* Player-R-4.png */; };
+		84E0A7A619A8E92D00B11C8D /* Player-R-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A79E19A8E92D00B11C8D /* Player-R-5.png */; };
+		84E0A7A719A8E92D00B11C8D /* Player-R-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A79F19A8E92D00B11C8D /* Player-R-6.png */; };
+		84E0A7A819A8E92D00B11C8D /* Player-R-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A7A019A8E92D00B11C8D /* Player-R-7.png */; };
+		84E0A7A919A8E92D00B11C8D /* Player-R-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A7A119A8E92D00B11C8D /* Player-R-8.png */; };
+		84E0A7AC19A8E94900B11C8D /* HACK_Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0A7AB19A8E94900B11C8D /* HACK_Player.m */; };
+		84E0A7AF19A8E98B00B11C8D /* HACK_Textures.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0A7AE19A8E98B00B11C8D /* HACK_Textures.m */; };
+		84E0A7B119A8EC4400B11C8D /* Instructions.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A7B019A8EC4400B11C8D /* Instructions.png */; };
+		84E0A7B319A8EE3E00B11C8D /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A7B219A8EE3E00B11C8D /* Splash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +74,20 @@
 		84E0A78B19A8DD7400B11C8D /* SpammerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpammerTests-Info.plist"; sourceTree = "<group>"; };
 		84E0A78D19A8DD7400B11C8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84E0A78F19A8DD7400B11C8D /* SpammerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpammerTests.m; sourceTree = "<group>"; };
+		84E0A79A19A8E92D00B11C8D /* Player-R-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-R-1.png"; sourceTree = "<group>"; };
+		84E0A79B19A8E92D00B11C8D /* Player-R-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-R-2.png"; sourceTree = "<group>"; };
+		84E0A79C19A8E92D00B11C8D /* Player-R-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-R-3.png"; sourceTree = "<group>"; };
+		84E0A79D19A8E92D00B11C8D /* Player-R-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-R-4.png"; sourceTree = "<group>"; };
+		84E0A79E19A8E92D00B11C8D /* Player-R-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-R-5.png"; sourceTree = "<group>"; };
+		84E0A79F19A8E92D00B11C8D /* Player-R-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-R-6.png"; sourceTree = "<group>"; };
+		84E0A7A019A8E92D00B11C8D /* Player-R-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-R-7.png"; sourceTree = "<group>"; };
+		84E0A7A119A8E92D00B11C8D /* Player-R-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-R-8.png"; sourceTree = "<group>"; };
+		84E0A7AA19A8E94900B11C8D /* HACK_Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACK_Player.h; sourceTree = "<group>"; };
+		84E0A7AB19A8E94900B11C8D /* HACK_Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACK_Player.m; sourceTree = "<group>"; };
+		84E0A7AD19A8E98B00B11C8D /* HACK_Textures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACK_Textures.h; sourceTree = "<group>"; };
+		84E0A7AE19A8E98B00B11C8D /* HACK_Textures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACK_Textures.m; sourceTree = "<group>"; };
+		84E0A7B019A8EC4400B11C8D /* Instructions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Instructions.png; sourceTree = "<group>"; };
+		84E0A7B219A8EE3E00B11C8D /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +157,13 @@
 				84E0A77519A8DD7400B11C8D /* HACKViewController.m */,
 				84E0A77719A8DD7400B11C8D /* HACKMyScene.h */,
 				84E0A77819A8DD7400B11C8D /* HACKMyScene.m */,
+				84E0A7AD19A8E98B00B11C8D /* HACK_Textures.h */,
+				84E0A7AE19A8E98B00B11C8D /* HACK_Textures.m */,
+				84E0A7AA19A8E94900B11C8D /* HACK_Player.h */,
+				84E0A7AB19A8E94900B11C8D /* HACK_Player.m */,
 				84E0A77A19A8DD7400B11C8D /* Spaceship.png */,
 				84E0A77C19A8DD7400B11C8D /* Images.xcassets */,
+				84E0A79919A8E8D100B11C8D /* Images */,
 				84E0A76319A8DD7400B11C8D /* Supporting Files */,
 			);
 			path = Spammer;
@@ -165,6 +196,23 @@
 				84E0A78C19A8DD7400B11C8D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84E0A79919A8E8D100B11C8D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84E0A7B219A8EE3E00B11C8D /* Splash.png */,
+				84E0A7B019A8EC4400B11C8D /* Instructions.png */,
+				84E0A79A19A8E92D00B11C8D /* Player-R-1.png */,
+				84E0A79B19A8E92D00B11C8D /* Player-R-2.png */,
+				84E0A79C19A8E92D00B11C8D /* Player-R-3.png */,
+				84E0A79D19A8E92D00B11C8D /* Player-R-4.png */,
+				84E0A79E19A8E92D00B11C8D /* Player-R-5.png */,
+				84E0A79F19A8E92D00B11C8D /* Player-R-6.png */,
+				84E0A7A019A8E92D00B11C8D /* Player-R-7.png */,
+				84E0A7A119A8E92D00B11C8D /* Player-R-8.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +294,19 @@
 			files = (
 				84E0A77B19A8DD7400B11C8D /* Spaceship.png in Resources */,
 				84E0A77D19A8DD7400B11C8D /* Images.xcassets in Resources */,
+				84E0A7A919A8E92D00B11C8D /* Player-R-8.png in Resources */,
 				84E0A77319A8DD7400B11C8D /* Main_iPad.storyboard in Resources */,
 				84E0A77019A8DD7400B11C8D /* Main_iPhone.storyboard in Resources */,
+				84E0A7A319A8E92D00B11C8D /* Player-R-2.png in Resources */,
+				84E0A7A819A8E92D00B11C8D /* Player-R-7.png in Resources */,
+				84E0A7B319A8EE3E00B11C8D /* Splash.png in Resources */,
+				84E0A7A619A8E92D00B11C8D /* Player-R-5.png in Resources */,
+				84E0A7A519A8E92D00B11C8D /* Player-R-4.png in Resources */,
+				84E0A7A719A8E92D00B11C8D /* Player-R-6.png in Resources */,
+				84E0A7A419A8E92D00B11C8D /* Player-R-3.png in Resources */,
 				84E0A76719A8DD7400B11C8D /* InfoPlist.strings in Resources */,
+				84E0A7B119A8EC4400B11C8D /* Instructions.png in Resources */,
+				84E0A7A219A8E92D00B11C8D /* Player-R-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +325,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E0A7AF19A8E98B00B11C8D /* HACK_Textures.m in Sources */,
+				84E0A7AC19A8E94900B11C8D /* HACK_Player.m in Sources */,
 				84E0A76919A8DD7400B11C8D /* main.m in Sources */,
 				84E0A77619A8DD7400B11C8D /* HACKViewController.m in Sources */,
 				84E0A76D19A8DD7400B11C8D /* HACKAppDelegate.m in Sources */,
@@ -487,6 +547,7 @@
 				84E0A79519A8DD7400B11C8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84E0A79619A8DD7400B11C8D /* Build configuration list for PBXNativeTarget "SpammerTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +556,7 @@
 				84E0A79819A8DD7400B11C8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
