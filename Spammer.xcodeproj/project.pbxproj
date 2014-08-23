@@ -39,7 +39,7 @@
 		84E0A7B319A8EE3E00B11C8D /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A7B219A8EE3E00B11C8D /* Splash.png */; };
 		84E0A7B619A8F6D900B11C8D /* HACK_GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0A7B519A8F6D900B11C8D /* HACK_GameScene.m */; };
 		84E0A7B919A8FFC900B11C8D /* HACK_ScrollingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0A7B819A8FFC900B11C8D /* HACK_ScrollingNode.m */; };
-		84E0A7BD19A904B900B11C8D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A7BC19A904B900B11C8D /* background.png */; };
+		84E0A7BF19A9098000B11C8D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A7BE19A9098000B11C8D /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +95,7 @@
 		84E0A7B519A8F6D900B11C8D /* HACK_GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACK_GameScene.m; sourceTree = "<group>"; };
 		84E0A7B719A8FFC900B11C8D /* HACK_ScrollingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACK_ScrollingNode.h; sourceTree = "<group>"; };
 		84E0A7B819A8FFC900B11C8D /* HACK_ScrollingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACK_ScrollingNode.m; sourceTree = "<group>"; };
-		84E0A7BC19A904B900B11C8D /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		84E0A7BE19A9098000B11C8D /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +213,7 @@
 		84E0A79919A8E8D100B11C8D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				84E0A7BC19A904B900B11C8D /* background.png */,
+				84E0A7BE19A9098000B11C8D /* background.png */,
 				84E0A7B219A8EE3E00B11C8D /* Splash.png */,
 				84E0A7B019A8EC4400B11C8D /* Instructions.png */,
 				84E0A79A19A8E92D00B11C8D /* Player-R-1.png */,
@@ -306,7 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E0A77B19A8DD7400B11C8D /* Spaceship.png in Resources */,
-				84E0A7BD19A904B900B11C8D /* background.png in Resources */,
+				84E0A7BF19A9098000B11C8D /* background.png in Resources */,
 				84E0A77D19A8DD7400B11C8D /* Images.xcassets in Resources */,
 				84E0A7A919A8E92D00B11C8D /* Player-R-8.png in Resources */,
 				84E0A77319A8DD7400B11C8D /* Main_iPad.storyboard in Resources */,

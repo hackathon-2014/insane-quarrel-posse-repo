@@ -10,9 +10,9 @@
 
 @interface HACK_ScrollingNode : SKSpriteNode
 
-@property (nonatomic) CGFloat scrollingSpeed;
+@property (nonatomic) CGFloat xScrollingSpeed, yScrollingSpeed;
 
-+ (id) scrollingNodeWithImageNamed:(NSString *)name inContainerWidth:(float) width;
++ (id) scrollingNodeWithImageNamed:(NSString *)name inContainerWidth:(float) width  inContainerHeight:(float) height;
 - (void) update:(NSTimeInterval)currentTime;
 
 

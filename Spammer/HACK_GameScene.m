@@ -40,8 +40,9 @@
 - (void)createSceneContents
 {
     // Background
-    _back = [HACK_ScrollingNode scrollingNodeWithImageNamed:@"background" inContainerWidth:self.frame.size.width];
-    [_back setScrollingSpeed:4];
+    _back = [HACK_ScrollingNode scrollingNodeWithImageNamed:@"background" inContainerWidth:self.frame.size.width inContainerHeight:self.frame.size.height];
+    _back.xScrollingSpeed = 4;
+    _back.yScrollingSpeed = 0;
     [self addChild:_back];
     
     // Player
