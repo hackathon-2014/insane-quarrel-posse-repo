@@ -1,5 +1,5 @@
 //
-//  HACKMyScene.h
+//  HACK_SplashScene.h
 //  Spammer
 //
 
@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface HACKMyScene : SKScene
+@interface HACK_SplashScene : SKScene
 
 @end

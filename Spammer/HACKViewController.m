@@ -7,7 +7,7 @@
 //
 
 #import "HACKViewController.h"
-#import "HACKMyScene.h"
+#import "HACK_SplashScene.h"
 
 @implementation HACKViewController
 
@@ -21,7 +21,7 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [HACKMyScene sceneWithSize:skView.bounds.size];
+    SKScene * scene = [HACK_SplashScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeResizeFill;
     
     // Present the scene.

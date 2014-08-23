@@ -17,7 +17,7 @@
 		84E0A77019A8DD7400B11C8D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A76E19A8DD7400B11C8D /* Main_iPhone.storyboard */; };
 		84E0A77319A8DD7400B11C8D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A77119A8DD7400B11C8D /* Main_iPad.storyboard */; };
 		84E0A77619A8DD7400B11C8D /* HACKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0A77519A8DD7400B11C8D /* HACKViewController.m */; };
-		84E0A77919A8DD7400B11C8D /* HACKMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0A77819A8DD7400B11C8D /* HACKMyScene.m */; };
+		84E0A77919A8DD7400B11C8D /* HACK_SplashScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0A77819A8DD7400B11C8D /* HACK_SplashScene.m */; };
 		84E0A77B19A8DD7400B11C8D /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A77A19A8DD7400B11C8D /* Spaceship.png */; };
 		84E0A77D19A8DD7400B11C8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A77C19A8DD7400B11C8D /* Images.xcassets */; };
 		84E0A78419A8DD7400B11C8D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E0A78319A8DD7400B11C8D /* XCTest.framework */; };
@@ -37,6 +37,7 @@
 		84E0A7AF19A8E98B00B11C8D /* HACK_Textures.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0A7AE19A8E98B00B11C8D /* HACK_Textures.m */; };
 		84E0A7B119A8EC4400B11C8D /* Instructions.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A7B019A8EC4400B11C8D /* Instructions.png */; };
 		84E0A7B319A8EE3E00B11C8D /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E0A7B219A8EE3E00B11C8D /* Splash.png */; };
+		84E0A7B619A8F6D900B11C8D /* HACK_GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E0A7B519A8F6D900B11C8D /* HACK_GameScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +66,8 @@
 		84E0A77219A8DD7400B11C8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		84E0A77419A8DD7400B11C8D /* HACKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HACKViewController.h; sourceTree = "<group>"; };
 		84E0A77519A8DD7400B11C8D /* HACKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HACKViewController.m; sourceTree = "<group>"; };
-		84E0A77719A8DD7400B11C8D /* HACKMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HACKMyScene.h; sourceTree = "<group>"; };
-		84E0A77819A8DD7400B11C8D /* HACKMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HACKMyScene.m; sourceTree = "<group>"; };
+		84E0A77719A8DD7400B11C8D /* HACK_SplashScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HACK_SplashScene.h; sourceTree = "<group>"; };
+		84E0A77819A8DD7400B11C8D /* HACK_SplashScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HACK_SplashScene.m; sourceTree = "<group>"; };
 		84E0A77A19A8DD7400B11C8D /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		84E0A77C19A8DD7400B11C8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		84E0A78219A8DD7400B11C8D /* SpammerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpammerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +89,8 @@
 		84E0A7AE19A8E98B00B11C8D /* HACK_Textures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACK_Textures.m; sourceTree = "<group>"; };
 		84E0A7B019A8EC4400B11C8D /* Instructions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Instructions.png; sourceTree = "<group>"; };
 		84E0A7B219A8EE3E00B11C8D /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash.png; sourceTree = "<group>"; };
+		84E0A7B419A8F6D900B11C8D /* HACK_GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACK_GameScene.h; sourceTree = "<group>"; };
+		84E0A7B519A8F6D900B11C8D /* HACK_GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACK_GameScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +158,10 @@
 				84E0A77119A8DD7400B11C8D /* Main_iPad.storyboard */,
 				84E0A77419A8DD7400B11C8D /* HACKViewController.h */,
 				84E0A77519A8DD7400B11C8D /* HACKViewController.m */,
-				84E0A77719A8DD7400B11C8D /* HACKMyScene.h */,
-				84E0A77819A8DD7400B11C8D /* HACKMyScene.m */,
+				84E0A77719A8DD7400B11C8D /* HACK_SplashScene.h */,
+				84E0A77819A8DD7400B11C8D /* HACK_SplashScene.m */,
+				84E0A7B419A8F6D900B11C8D /* HACK_GameScene.h */,
+				84E0A7B519A8F6D900B11C8D /* HACK_GameScene.m */,
 				84E0A7AD19A8E98B00B11C8D /* HACK_Textures.h */,
 				84E0A7AE19A8E98B00B11C8D /* HACK_Textures.m */,
 				84E0A7AA19A8E94900B11C8D /* HACK_Player.h */,
@@ -328,9 +333,10 @@
 				84E0A7AF19A8E98B00B11C8D /* HACK_Textures.m in Sources */,
 				84E0A7AC19A8E94900B11C8D /* HACK_Player.m in Sources */,
 				84E0A76919A8DD7400B11C8D /* main.m in Sources */,
+				84E0A7B619A8F6D900B11C8D /* HACK_GameScene.m in Sources */,
 				84E0A77619A8DD7400B11C8D /* HACKViewController.m in Sources */,
 				84E0A76D19A8DD7400B11C8D /* HACKAppDelegate.m in Sources */,
-				84E0A77919A8DD7400B11C8D /* HACKMyScene.m in Sources */,
+				84E0A77919A8DD7400B11C8D /* HACK_SplashScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

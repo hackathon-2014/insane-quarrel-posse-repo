@@ -1,14 +1,15 @@
 //
-//  HACKMyScene.m
+//  HACK_SplashScene.m
 //  Spammer
 //
 //  Created by admin on 8/23/14.
 //  Copyright (c) 2014 worldquest. All rights reserved.
 //
 
-#import "HACKMyScene.h"
+#import "HACK_SplashScene.h"
+#import "HACK_GameScene.h"
 
-@implementation HACKMyScene
+@implementation HACK_SplashScene
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
@@ -53,11 +54,11 @@
                 SKAction *fadeAway = [SKAction fadeOutWithDuration: 1];
                 SKAction *grouped = [SKAction group:@[zoom, fadeAway]];
                 [startNode runAction:grouped];
-//                [splashNode runAction: grouped completion:^{
-//                    SKBGameScene *nextScene  = [[SKBGameScene alloc] initWithSize:self.size];
-//                    SKTransition *doors = [SKTransition doorwayWithDuration:0.5];
-//                    [self.view presentScene:nextScene transition:doors];
-//                }];
+                [splashNode runAction: grouped completion:^{
+                    HACK_GameScene *nextScene  = [[HACK_GameScene alloc] initWithSize:self.size];
+                    SKTransition *doors = [SKTransition doorwayWithDuration:0.5];
+                    [self.view presentScene:nextScene transition:doors];
+                }];
             }
         } else {
             // first tap - show instructions
