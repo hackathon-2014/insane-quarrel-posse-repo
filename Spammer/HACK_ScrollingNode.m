@@ -22,7 +22,7 @@
     int xCount = 0;
     while(xTotal<(width + image.size.width)){
         SKSpriteNode * child = [SKSpriteNode spriteNodeWithImageNamed:name ];
-        child.name = [NSString stringWithFormat:@"xChild%d", xCount];
+        child.name = @"background";
         [child setAnchorPoint:CGPointZero];
         [child setPosition:CGPointMake(xTotal, 0)];
         [realNode addChild:child];
@@ -34,7 +34,7 @@
     int yCount = 0;
     while(yCount<xCount){
         SKSpriteNode * child = [SKSpriteNode spriteNodeWithImageNamed:name ];
-        child.name = [NSString stringWithFormat:@"yChild%d", yCount];
+        child.name = @"background";
         [child setAnchorPoint:CGPointZero];
         [child setPosition:CGPointMake(xTotal, image.size.height)];
         [realNode addChild:child];
