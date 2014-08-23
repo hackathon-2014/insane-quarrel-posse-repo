@@ -47,6 +47,9 @@
 
 #define kEmailFileName                       @"Email.png"
 #define kServerFileName                      @"Server.png"
+#define kVictim1FileName                     @"Victim1.png"
+#define kVictim2FileName                     @"Victim2.png"
+#define kVictim3FileName                     @"Victim3.png"
 
 @interface HACK_Textures : NSObject
 

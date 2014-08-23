@@ -12,6 +12,7 @@
 static const uint32_t kPlayerCategory   =       0x1 << 0;
 static const uint32_t kEmailCategory    =       0x1 << 1;
 static const uint32_t kServerCategory   =       0x1 << 2;
+static const uint32_t kVictimCategory   =       0x1 << 3;
 
 static const int kPlayerTurnSegments    =       8;
 

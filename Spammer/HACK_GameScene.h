@@ -12,6 +12,7 @@
 #import "HACK_Player.h"
 #import "HACK_Email.h"
 #import "HACK_Server.h"
+#import "HACK_Victim.h"
 
 @interface HACK_GameScene : SKScene <SKPhysicsContactDelegate>
 

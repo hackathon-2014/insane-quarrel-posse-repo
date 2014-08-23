@@ -128,6 +128,13 @@
         child.position = CGPointMake(child.position.x-_background.xScrollingSpeed, child.position.y-_background.yScrollingSpeed);
     }];
     
+    // victims
+    [self enumerateChildNodesWithName:@"victim" usingBlock:^(SKNode *node, BOOL *stop) {
+        *stop = NO;
+        HACK_Server *child = (HACK_Server *)node;
+        child.position = CGPointMake(child.position.x-_background.xScrollingSpeed, child.position.y-_background.yScrollingSpeed);
+    }];
+    
     //player direction cooresponds to static background scrolling
     switch (_playerSprite.currentDirection) {
         case HACK_PlayerDirectionE:
@@ -172,31 +179,69 @@
         _enemyIsSpawningFlag = YES;
         
         // begin delay & when completed spawn new enemy
-        SKAction *spacing = [SKAction waitForDuration:3];
+        SKAction *spacing = [SKAction waitForDuration:1];
         [self runAction:spacing completion:^{
             // Create & spawn the new Enemy
             _enemyIsSpawningFlag = NO;
             
             HACK_Server *newServer = nil;
+            HACK_Victim *newVictim = nil;
+            int x = 0,y = 0;
+            
             if (_background.xScrollingSpeed > 0 && _background.yScrollingSpeed > 0) {
-                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(565, 320)];
+                x=565;
+                y=rand() % 320;
             } else if (_background.xScrollingSpeed > 0 && _background.yScrollingSpeed < 0) {
-                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(565, 0)];
+                x=565;
+                y=rand() % 320;
             } else if (_background.xScrollingSpeed == 0 && _background.yScrollingSpeed > 0) {
-                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(200, 320)];
+                x=rand() % 565;
+                y=320;
             } else if (_background.xScrollingSpeed == 0 && _background.yScrollingSpeed < 0) {
-                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(350, 0)];
+                x=rand() % 320;
+                y=0;
             } else if (_background.xScrollingSpeed < 0 && _background.yScrollingSpeed > 0) {
-                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(0, 300)];
+                x=0;
+                y=rand() % 320;
             } else if (_background.xScrollingSpeed < 0 && _background.yScrollingSpeed < 0) {
-                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(0, 0)];
+                x=0;
+                y=rand() % 320;
             } else if (_background.xScrollingSpeed > 0 && _background.yScrollingSpeed == 0) {
-                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(565, 320)];
+                x=565;
+                y=rand() % 320;
             } else if (_background.xScrollingSpeed < 0 && _background.yScrollingSpeed == 0) {
-                newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(0, 100)];
+                x=0;
+                y=rand() % 320;
             }
 
             [newServer spawnedInScene:self];
+            
+            int r = rand() % 5;
+            NSLog(@"%d", r);
+            switch (r) {
+                case 0:
+                    newServer = [HACK_Server initNewServer:self startingPoint:CGPointMake(x, y)];
+                    break;
+                    
+                case 1:
+                    newVictim = [HACK_Victim initNewVictim:self startingPoint:CGPointMake(x, y)];
+                    break;
+                    
+                case 2:
+                    newVictim = [HACK_Victim initNewVictim:self startingPoint:CGPointMake(x, y)];
+                    break;
+                    
+                case 3:
+                   newVictim = [HACK_Victim initNewVictim:self startingPoint:CGPointMake(x, y)];
+                    break;
+                    
+                case 4:
+                    newVictim = [HACK_Victim initNewVictim:self startingPoint:CGPointMake(x, y)];
+                    break;
+                    
+                default:
+                    break;
+            }
         }];
     }
 }
