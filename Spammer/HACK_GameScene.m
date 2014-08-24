@@ -100,13 +100,56 @@
 
 
 
+- (void)didBeginContact:(SKPhysicsContact *)contact
+{
+    SKPhysicsBody *firstBody, *secondBody;
+    
+    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
+    {
+        firstBody = contact.bodyA;
+        secondBody = contact.bodyB;
+    }
+    else {
+        firstBody = contact.bodyB;
+        secondBody = contact.bodyA;
+    }
+    
+    // Email / Server
+    if ((((firstBody.categoryBitMask & kEmailCategory) != 0) && ((secondBody.categoryBitMask & kServerCategory) != 0)))
+    {
+        _emailIsBlockedFlag = TRUE;
+        SKAction *blocked = [SKAction waitForDuration:3];
+        [self runAction:blocked completion:^{
+            _emailIsBlockedFlag = FALSE;
+        }];
+    }
+    
+    // Email / Victim
+    if ((((firstBody.categoryBitMask & kEmailCategory) != 0) && ((secondBody.categoryBitMask & kVictimCategory) != 0)))
+    {
+        NSLog(@"Score some points...");
+        [firstBody.node removeFromParent];
+        [secondBody.node removeFromParent];
+        
+        // particle special effect
+        NSString *emitterPath = [[NSBundle mainBundle] pathForResource:@"Victimized" ofType:@"sks"];
+        SKEmitterNode *bling = [NSKeyedUnarchiver unarchiveObjectWithFile:emitterPath];
+        bling.position = secondBody.node.position;
+        bling.name = @"victimized";
+        bling.targetNode = self.scene;
+        [self addChild:bling];
+    }
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         if (location.y >= (self.frame.size.height / 2 )) {
             // user touched upper half of the screen (zero = bottom of screen)
-            [self shootEmail];            
+            if (!_emailIsBlockedFlag) {
+                [self shootEmail];
+            }
         } else if (location.x <= ( self.frame.size.width / 2 )) {
             // user touched left side of screen
             [_playerSprite rotateLeft];
@@ -116,6 +159,12 @@
         }
     }
 }
+
+
+
+#pragma mark Update
+
+
 
 -(void)update:(CFTimeInterval)currentTime {
     // scrolling background

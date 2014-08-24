@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8431348619A94E5500777BEA /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 8431348419A94E5500777BEA /* Splash.png */; };
-		8431348819A94F2E00777BEA /* Instructions.png in Resources */ = {isa = PBXBuildFile; fileRef = 8431348719A94F2E00777BEA /* Instructions.png */; };
 		8431348B19A951E700777BEA /* HACK_Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 8431348A19A951E700777BEA /* HACK_Server.m */; };
 		8431348D19A9576000777BEA /* Server.png in Resources */ = {isa = PBXBuildFile; fileRef = 8431348C19A9576000777BEA /* Server.png */; };
 		84E0A75B19A8DD7400B11C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E0A75A19A8DD7400B11C8D /* Foundation.framework */; };
@@ -72,6 +71,9 @@
 		84F6A61B19A95DA40015ECC0 /* Victim1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6A61819A95DA40015ECC0 /* Victim1.png */; };
 		84F6A61C19A95DA40015ECC0 /* Victim2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6A61919A95DA40015ECC0 /* Victim2.png */; };
 		84F6A61D19A95DA40015ECC0 /* Victim3.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6A61A19A95DA40015ECC0 /* Victim3.png */; };
+		84F6A62119A9642D0015ECC0 /* Victimized.sks in Resources */ = {isa = PBXBuildFile; fileRef = 84F6A61F19A9642D0015ECC0 /* Victimized.sks */; };
+		84F6A62219A9642D0015ECC0 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6A62019A9642D0015ECC0 /* spark.png */; };
+		84F6A62419A967E70015ECC0 /* Instructions.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6A62319A967E70015ECC0 /* Instructions.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +88,6 @@
 
 /* Begin PBXFileReference section */
 		8431348419A94E5500777BEA /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash.png; sourceTree = "<group>"; };
-		8431348719A94F2E00777BEA /* Instructions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Instructions.png; sourceTree = "<group>"; };
 		8431348919A951E700777BEA /* HACK_Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACK_Server.h; sourceTree = "<group>"; };
 		8431348A19A951E700777BEA /* HACK_Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACK_Server.m; sourceTree = "<group>"; };
 		8431348C19A9576000777BEA /* Server.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Server.png; sourceTree = "<group>"; };
@@ -163,6 +164,9 @@
 		84F6A61819A95DA40015ECC0 /* Victim1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Victim1.png; sourceTree = "<group>"; };
 		84F6A61919A95DA40015ECC0 /* Victim2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Victim2.png; sourceTree = "<group>"; };
 		84F6A61A19A95DA40015ECC0 /* Victim3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Victim3.png; sourceTree = "<group>"; };
+		84F6A61F19A9642D0015ECC0 /* Victimized.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Victimized.sks; sourceTree = "<group>"; };
+		84F6A62019A9642D0015ECC0 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		84F6A62319A967E70015ECC0 /* Instructions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Instructions.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +252,7 @@
 				84F6A61619A95C850015ECC0 /* HACK_Victim.m */,
 				84E0A77A19A8DD7400B11C8D /* Spaceship.png */,
 				84E0A77C19A8DD7400B11C8D /* Images.xcassets */,
+				84F6A61E19A964010015ECC0 /* Emitters */,
 				84E0A79919A8E8D100B11C8D /* Images */,
 				84E0A76319A8DD7400B11C8D /* Supporting Files */,
 			);
@@ -286,7 +291,7 @@
 		84E0A79919A8E8D100B11C8D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				8431348719A94F2E00777BEA /* Instructions.png */,
+				84F6A62319A967E70015ECC0 /* Instructions.png */,
 				8431348419A94E5500777BEA /* Splash.png */,
 				84E0A7BE19A9098000B11C8D /* background.png */,
 				84EBCE7719A9386A00AA0527 /* Email.png */,
@@ -328,6 +333,15 @@
 				84EBCE6E19A934C300AA0527 /* Player-U-8.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		84F6A61E19A964010015ECC0 /* Emitters */ = {
+			isa = PBXGroup;
+			children = (
+				84F6A61F19A9642D0015ECC0 /* Victimized.sks */,
+				84F6A62019A9642D0015ECC0 /* spark.png */,
+			);
+			name = Emitters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +430,7 @@
 				84EBCE6619A934B400AA0527 /* Player-D-8.png in Resources */,
 				84EBCE7219A934C300AA0527 /* Player-U-4.png in Resources */,
 				84F6A61C19A95DA40015ECC0 /* Victim2.png in Resources */,
+				84F6A62119A9642D0015ECC0 /* Victimized.sks in Resources */,
 				84F6A61B19A95DA40015ECC0 /* Victim1.png in Resources */,
 				84E0A7CB19A928D800B11C8D /* Player-L-4.png in Resources */,
 				84E0A7CC19A928D800B11C8D /* Player-L-5.png in Resources */,
@@ -424,11 +439,11 @@
 				84E0A7CF19A928D800B11C8D /* Player-L-8.png in Resources */,
 				84E0A7BF19A9098000B11C8D /* background.png in Resources */,
 				84E0A77D19A8DD7400B11C8D /* Images.xcassets in Resources */,
+				84F6A62419A967E70015ECC0 /* Instructions.png in Resources */,
 				84E0A7A919A8E92D00B11C8D /* Player-R-8.png in Resources */,
 				84EBCE6519A934B400AA0527 /* Player-D-7.png in Resources */,
 				84E0A77319A8DD7400B11C8D /* Main_iPad.storyboard in Resources */,
 				84F6A61D19A95DA40015ECC0 /* Victim3.png in Resources */,
-				8431348819A94F2E00777BEA /* Instructions.png in Resources */,
 				84EBCE6F19A934C300AA0527 /* Player-U-1.png in Resources */,
 				84EBCE7419A934C300AA0527 /* Player-U-6.png in Resources */,
 				84E0A7CA19A928D800B11C8D /* Player-L-3.png in Resources */,
@@ -449,6 +464,7 @@
 				84E0A76719A8DD7400B11C8D /* InfoPlist.strings in Resources */,
 				84EBCE6219A934B400AA0527 /* Player-D-4.png in Resources */,
 				84EBCE7519A934C300AA0527 /* Player-U-7.png in Resources */,
+				84F6A62219A9642D0015ECC0 /* spark.png in Resources */,
 				84EBCE7019A934C300AA0527 /* Player-U-2.png in Resources */,
 				84E0A7A219A8E92D00B11C8D /* Player-R-1.png in Resources */,
 				84E0A7C819A928D800B11C8D /* Player-L-1.png in Resources */,

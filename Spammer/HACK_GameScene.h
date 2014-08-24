@@ -22,5 +22,6 @@
 @property (strong, nonatomic) HACK_ScrollingNode *background;
 
 @property BOOL enemyIsSpawningFlag;
+@property BOOL emailIsBlockedFlag;
 
 @end
